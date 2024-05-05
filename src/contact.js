@@ -6,25 +6,37 @@ const setContactContent=()=>{
     headline.textContent = "Contact us";
     content.appendChild(headline);
 
-    const phoneTitle = document.createElement("h2");
-    phoneTitle.textContent = "Phones";
-    content.appendChild(phoneTitle);
+    const phoneContainer = document.createElement("div");
+    phoneContainer.classList.add("phone")
+    content.appendChild(phoneContainer);  
 
-    const phoneReserves = document.createElement("h3");
-    phoneReserves.textContent = "For reserves";
-    content.appendChild(phoneReserves);
+        const phoneTitle = document.createElement("h2");
+        phoneTitle.textContent = "Phones";
+        phoneContainer.appendChild(phoneTitle);
 
-    const phoneReservesText = document.createElement("p");
-    phoneReservesText.textContent = "+511 2415559";
-    content.appendChild(phoneReservesText);
+        const reservesContainer = document.createElement("div");
+        reservesContainer.classList.add("tlf")
+        phoneContainer.appendChild(reservesContainer);  
 
-    const phoneInquiries = document.createElement("h3");
-    phoneInquiries.textContent = "For other inquiries";
-    content.appendChild(phoneInquiries);
+            const phoneReserves = document.createElement("h3");
+            phoneReserves.textContent = "For reserves";
+            reservesContainer.appendChild(phoneReserves);
 
-    const phoneInquiriesText = document.createElement("p");
-    phoneInquiriesText.textContent = "+51 959444091";
-    content.appendChild(phoneInquiriesText);
+            const phoneReservesText = document.createElement("p");
+            phoneReservesText.textContent = "+511 2415559";
+            reservesContainer.appendChild(phoneReservesText);
+
+        const inquiriesContainer = document.createElement("div");
+        inquiriesContainer.classList.add("tlf")
+        phoneContainer.appendChild(inquiriesContainer); 
+
+            const phoneInquiries = document.createElement("h3");
+            phoneInquiries.textContent = "For other inquiries";
+            inquiriesContainer.appendChild(phoneInquiries);
+
+            const phoneInquiriesText = document.createElement("p");
+            phoneInquiriesText.textContent = "+51 959444091";
+            inquiriesContainer.appendChild(phoneInquiriesText);
 
     const addressTitle = document.createElement("h2");
     addressTitle.textContent = "Find us here";
@@ -32,8 +44,8 @@ const setContactContent=()=>{
 
     const contactImage = document.createElement("img");
     contactImage.setAttribute("src",photo);
-    contactImage.setAttribute("heigth",'200px');
-    contactImage.setAttribute("width",'200px');
+    contactImage.setAttribute("heigth",'auto');
+    contactImage.setAttribute("width",'400px');
     content.appendChild(contactImage);
 
     const addressText = document.createElement("p");
