@@ -1,4 +1,3 @@
-console.log("Doing great!");
 import { setHomeContent } from "./home.js";
 import { setContactContent } from "./contact.js";
 import { setAboutContent } from "./about.js";
@@ -13,8 +12,7 @@ const contactButton = document.getElementById("contact-button")
 const menuButton = document.getElementById("menu-button")
 const buttons = [homeButton, aboutButton, contactButton, menuButton]
 
-
-homeButton.addEventListener('click',()=>{    
+homeButton.addEventListener('click', function (){    
     buttons.forEach(function(el){
         el.classList.remove("active")
     })
@@ -50,3 +48,4 @@ menuButton.addEventListener('click',()=>{
     setMenuContent();
 })
 
+setHomeContent();
